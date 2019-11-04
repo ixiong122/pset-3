@@ -2,10 +2,12 @@ const readlineSync = require("readline-sync");
 
 const MIN = Number.MIN_SAFE_INTEGER;
 const MAX = Number.MAX_SAFE_INTEGER;
+
 const firstNumber=readlineSync.question("Enter three numbers.\n");
 const secondNumber=readlineSync.question("");
 const thirdNumber=readlineSync.question("");
-if (Number.isNaN(firstNumber)){
+
+if (Number.isNaN(firstNumber, secondNumber)){
   console.log("Invalid.")
 }
 else if (Number.isNaN(secondNumber)){
@@ -23,6 +25,6 @@ else if (secondNumber < MIN || secondNumber > MAX){
 else if (thirdNumber < MIN || thirdNumber > MAX){
   console.log("Invalid.")
 }
-else if (firstNumber == secondNumber == thirdNumber){
+else if (firstNumber === secondNumber === thirdNumber){
   console.log("Equal");
 }
