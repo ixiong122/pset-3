@@ -3,7 +3,7 @@ const readlineSync = require("readline-sync");
 const MIN = 0;
 const MAX = 100;
 
-const grade = Number(readlineSync.question("Enter a grade:"));
+const grade = Number(readlineSync.question("\n\nEnter a grade: "));
 
 if (Number.isNaN(grade)){
   console.log("\nInvalid.");
